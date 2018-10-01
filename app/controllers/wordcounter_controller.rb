@@ -7,7 +7,7 @@ class WordcounterController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @post = Wordcount.all
   end
 
 
@@ -24,4 +24,8 @@ class WordcounterController < ApplicationController
 	  def wordcount_params
 	    params.require(:wordcounter).permit(:text)
 	  end
+
+	  def countthemwords
+	  	@count = @post.text.count(" ") + 1
+	  end 
 end
