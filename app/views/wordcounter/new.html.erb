@@ -1,0 +1,13 @@
+<h1> Tell Me A Story - MAKE IT COUNT </h1>
+
+<%= form_with scope: :wordcounter, url: wordcounter_index_path, local: true do |form| %>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
