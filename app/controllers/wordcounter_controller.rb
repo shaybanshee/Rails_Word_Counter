@@ -8,6 +8,7 @@ class WordcounterController < ApplicationController
 
   def index
     @post = Wordcount.all
+
   end
 
 
@@ -25,7 +26,5 @@ class WordcounterController < ApplicationController
 	    params.require(:wordcounter).permit(:text)
 	  end
 
-	  def countthemwords
-	  	@count = @post.text.count(" ") + 1
-	  end 
+	  
 end

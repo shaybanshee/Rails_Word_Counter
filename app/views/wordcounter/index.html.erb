@@ -1,0 +1,10 @@
+<p>
+  <strong>Text:</strong>
+  <% @post.each do |text| %>
+
+  <%= text.text %><br>
+  <%= text.text.count(" ") + 1 %><br>
+
+
+  <% end %>
+</p>
